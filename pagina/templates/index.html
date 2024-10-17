@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="Pizzaria Dom Faustino" />
+  <meta name="description"
+    content="Entregas por telefone ou app, grande variedade de pizzas e bordas recheadas. Av. Itapark, 4437 B Jardim Itapark - Mauá - São Paulo" />
+  <meta name="author" content="Gabscor" />
+  <link rel="shortcut icon" href="{{url_for('static', filename='images/dficon.png')}}">
+
+  <title> Pizzaria Dom Faustino </title>
+
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.css')}}" />
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+    integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+    crossorigin="anonymous" />
+  <link href="{{url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet" />
+  <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+  <link href="{{url_for('static', filename='css/responsive.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="{{url_for('static', filename='images/pizzaqueijo_p.png')}}" alt="">
+    </div>
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="#">
+            <img class="logo" src="{{url_for('static', filename='images/logo_aiTeste2.png')}}">
+            <span>
+              Dom Faustino
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mx-auto ">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Início <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sobre">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/joinUs">Trabalhe Conosco</a>
+              </li>
+            </ul>
+            <div class="user_option">
+              <a href="/addItem" class="order_online">
+                Peça Online
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      A melhor pizza está aqui!
+                    </h1>
+                    <p>
+                      Conheça nosso cardápio, possuímos uma grande variedade de sabores e alta customização para atender
+                      a todos os tipos de gostos. Aproveite!
+                    </p>
+                    <div class="btn-box">
+                      <a href="" class="btn1">
+                        Peça Agora
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Baixe nosso App
+                    </h1>
+                    <p>
+                      Faça seu pedido pelo app! Disponível na Play e Apple Store.
+                    </p>
+                    <div class="btn-box">
+                      <a href="" class="btn1">
+                        Baixe Aqui
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <ol class="carousel-indicators">
+            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+          </ol>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- food section -->
+
+  <section class="food_section layout_padding-bottom layout_padding-top" id="menu">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Cardápio
+        </h2>
+      </div>
+
+      <ul class="filters_menu">
+        <li class="active" data-filter="*">Tudo</li>
+        <li data-filter=".frango">Frango</li>
+        <li data-filter=".carne">Carne</li>
+        <li data-filter=".queijo">Queijo</li>
+        <li data-filter=".vegetal">Vegetal</li>
+        <li data-filter=".peixe">Peixe</li>
+        <li data-filter=".calabresa">Calabresa</li>
+        <li data-filter=".defumado">Defumados</li>
+        <li data-filter=".doce">Doce</li>
+        <li data-filter=".fries">Bordas</li>
+      </ul>
+
+      <div class="filters-content">
+        <div class="row grid">
+          <div class="col-md-4 all frango">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{{url_for('static', filename='images/f1.png')}}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5 class="text-center">
+                    Galeto
+                  </h5>
+                  <p>
+                    <b>Ingredientes:</b> Frango, milho, palmito, cebola, bacon, mussarela, catupiry e tomate
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 all carne">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{{url_for('static', filename='images/f3.png')}}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5 class="text-center">
+                    Bolonhesa IV
+                  </h5>
+                  <p>
+                    <b>Ingredientes:</b> Peito de peru, carne moída, azeitonas, milho, catupiry, mussarela e batata palha
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-md-12 all queijo">
+            <div class="box-food">
+              <div class="d-flex mt-4">
+
+                <div class="flex-fill center-line left"></div>
+
+                <div class="menu-header">
+                  <h5>
+                    QUEIJO
+                  </h5>
+                </div>
+
+                <div class="flex-fill center-line right"></div>
+
+              </div>
+
+              <div class="menu-img">
+                <img src="images/pizza-frango.jpg">
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <ol start="42">
+                    <li><b>ALHO</b><br>Mussarela e alho</li>
+                    <li><b>ALHO II</b><br>Mussarela, catupiry, alho e cebola</li>
+                    <li><b>AMERICANA</b><br>Milho, palmito, champignon, cebola, mussarela, catupiry e bacon</li>
+                    <li><b>BÚFALA</b><br>Mussarela de Búfala e tomate</li>
+                    <li><b>BÚFALA II</b><br>Catupiry, mussarela de Búfala e tomate</li>
+                  </ol>
+                </div>
+                <div class="col-md-6">
+                  <ol start="46">
+                    <li><b>ALHO</b><br>Mussarela e alho</li>
+                    <li><b>ALHO II</b><br>Mussarela, catupiry, alho e cebola</li>
+                    <li><b>AMERICANA</b><br>Milho, palmito, champignon, cebola, mussarela, catupiry e bacon</li>
+                    <li><b>BÚFALA</b><br>Mussarela de Búfala e tomate</li>
+                    <li><b>BÚFALA II</b><br>Catupiry, mussarela de Búfala e tomate</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        </div>
+      </div>
+    </div>
+    <div class="btn-box">
+      <a href="#menu">
+        Subir
+      </a>
+    </div>
+    </div>
+  </section>
+
+  <section class="about_section layout_padding" id="sobre">
+    <div class="container  ">
+
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="{{url_for('static', filename='images/logo_aiTeste2.png')}}">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Somos a Dom Faustino
+              </h2>
+            </div>
+            <p>
+              Somos apaixonados por pizza. Por isso criamos as melhores pizzas, isso porque trabalhamos com os melhores
+              produtos e temos um atendimento diferenciado. Nossa massa é bem crocante e leve, e nossas pizzas são
+              realmente recheadas com as mais fartas combinações de ingredientes.
+              A pizzaria Dom Faustino terá o enorme prazer em lhe atender! <br><br>
+              <i>Atendemos delivery, viagem e online.</i>
+            </p>
+            <a href="#footer">
+              Saiba Mais
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="client_section layout_padding-bottom layout_padding-top">
+    <div class="container">
+      <div class="heading_container heading_center psudo_white_primary mb_45">
+        <h2>
+          Avaliações dos Nossos Clientes
+        </h2>
+      </div>
+      <div class="carousel-wrap row ">
+        <div class="owl-carousel client_owl-carousel">
+          <div class="item">
+            <div class="box">
+              <div class="detail-box">
+                <p>
+                  A melhor pizza com toda a certeza! A massa é na medida certa e o recheio é bem generoso, borda muito
+                  bem recheada! Tudo muito gostoso. Somos clientes a mais de um ano e pretendemos contínuar sendo.
+                </p>
+                <h6>
+                  Stephenie Sales
+                </h6>
+                <div class="stars">
+                  <img class="icon" src="{{url_for('static', filename='images/star.svg')}}">
+                  <img class="icon" src="{{url_for('static', filename='images/star.svg')}}">
+                  <img class="icon" src="{{url_for('static', filename='images/star.svg')}}">
+                  <img class="icon" src="{{url_for('static', filename='images/star.svg')}}">
+                  <img class="icon" src="{{url_for('static', filename='images/star.svg')}}">
+                </div>
+              </div>
+              <div class="img-box">
+                <img src="{{url_for('static', filename='images/stephenie sales.png')}}" class="box-img">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="detail-box">
+                <p>
+                  Ambiente agradável para aguardar sua pizza, bom atendimento, pizzas maravilhosas, gostei muito. Foi a
+                  primeira vez de muitas que tinha dúvida em relação se era uma boa pizza. Pode ir sem preocupação,
+                  muita qualidade nos ingredientes.
+                </p>
+                <h6>
+                  Emerson Moreira Carvalho
+                </h6>
+                <div class="stars">
+                  <img class="icon" src="{{url_for('static', filename='images/star.svg')}}">
+                  <img class="icon" src="{{url_for('static', filename='images/star.svg')}}">
+                  <img class="icon" src="{{url_for('static', filename='images/star.svg')}}">
+                  <img class="icon" src="{{url_for('static', filename='images/star.svg')}}">
+                  <img class="icon" src="{{url_for('static', filename='images/star.svg')}}">
+                </div>
+              </div>
+              <div class="img-box">
+                <img src="{{url_for('static', filename='images/emerson carvalho.png')}}" alt="" class="box-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer_section" id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-col">
+          <div class="footer_contact">
+            <h4>
+              Contatos
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Av. Itapark, 4437 B - Jardim Itapark - Mauá-SP
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  (11) 3495-9635
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  (11) 3420-0349
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  (11) 2228-6103
+                </span>
+              </a>
+
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  domfaustino@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <a href="" class="footer-logo">
+              Dom Faustino
+            </a>
+            <p>
+              A Pizzaria Dom Faustino é pioneira na confecção de bordas gourmet’s na cidade de Mauá!! São mais de 145
+              sabores de pizzas com preços variados!! A pizzaria delivery mais famosa da região de Mauá pelo preço
+              acessível e excelência em qualidade.
+            </p>
+            <div class="footer_social">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <h4>
+            Funcionamento
+          </h4>
+          <p>
+            <b>
+              Segunda à Quinta e Domingo
+            </b>
+          </p>
+          <p>
+            Das 18:00 às 23:00
+          </p>
+          <p>
+            <b>
+              Sexta e Sábado
+            </b>
+          </p>
+          <p>
+            Das 18:00 às 23:30
+          </p>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> Todos os Direitos Reservados |
+          <a href="https://www.linkedin.com/in/gabrielcsantos1/" target="_blank">Gabscor</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{url_for('static', filename='js/jquery-3.4.1.min.js')}}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <script src="{{url_for('static', filename='js/custom.js')}}"></script>
+
+</body>
+
+</html>
