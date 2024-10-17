@@ -2,8 +2,10 @@ from flask import Flask, render_template, request, redirect, url_for
 import sqlite3
 import os
 from werkzeug.utils import secure_filename
+from flask_frozen import Freezer
 
 app = Flask(__name__)
+freezer = Freezer(app)
 
 # Configuração do diretório para salvar as imagens
 UPLOAD_FOLDER = 'static/uploads/'
@@ -65,4 +67,4 @@ def tabela_dados():
     return render_template('dataTable.html', dados=dados)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    freezer.freeze()
